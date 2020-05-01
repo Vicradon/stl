@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./icons/favicon.ico" />
+
+  <title>Todo App</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="manifest" href="manifest.json">
+
+
+  <!-- IOS SUPPORT -->
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#007bff">
+  <meta name="theme-color" content="#007bff">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <p>
+        <a class="logo" href="/index.html">
+          <img src="./icons/favicon-32x32.png" alt="logo">
+        </a>
+      </p>
+      <p><a class="about" href="/pages/about.html">About</a></p>
+    </nav>
+  </header>
+
+  <main id="root">
+    <form id="text-to-send-form" action="" method="post">
+      <label for="text-to-send">
+        <p>Text To Send</p>
+        <textarea name="text-to-send" id="text-to-send" cols="30" rows="10"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+
+  </main>
+
+  <script src="./js/regSW.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
