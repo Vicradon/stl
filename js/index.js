@@ -5,7 +5,7 @@ form.onsubmit = e => {
   e.preventDefault();
   const text = form['text-to-send'].value;
 
-  fetch('/text-to-send/?' + new URLSearchParams({
+  fetch('/.netlify/functions/text-to-send/?message=' + new URLSearchParams({
     message: text
   }), {
     method: 'POST',
@@ -21,9 +21,13 @@ form.onsubmit = e => {
   //   .catch(err => console.error(err))
 }
 
-fetch('.netlify.com/.netlify/functions/text-to-send', {
-  method: "Get",
-  headers: {
-    'Content-Type': 'text/plain'
-  }
-}).then(res => res.json()).then(data => $('.newMessage').textContent = data).catch(console.error);
+const getRecent = () => {
+  fetch('.netlify.com/.netlify/functions/text-to-send', {
+    method: "Get",
+    headers: {
+      'Content-Type': 'text/plain'
+    }
+  }).then(res => res.json()).then(data => $('.newMessage').textContent = data).catch(console.error);
+
+}
+
